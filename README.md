@@ -1,7 +1,7 @@
 <h1>Movie App feito em ReactJs</h1>
 
 <p>
-Movie App feito em ReactJs, cosumindo os da api omdb, para rodar o projeto execute
+Movie App feito em ReactJs, cosumindo os dados da api omdb, para rodar o projeto execute
 <b>npm start</b>
 </p>
 
