@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 import { AiOutlineArrowLeft} from 'react-icons/ai';
 import './index.scss';
 
-console.log(url);
-
 export default function TodoApp() {
 
     const [error, setError] = useState(null);
