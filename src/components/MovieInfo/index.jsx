@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import url from '../../config/index';
 import { useLocation, Link }  from 'react-router-dom';
 import Ratings from '../Ratings';
+import { AiOutlineArrowLeft} from 'react-icons/ai';
 import './index.scss';
 
 function useQuery(){
@@ -37,26 +38,28 @@ export default function MovieInfo(){
     }else{
         return(
             <div className="container-movie">
-                <Link className="back" to="/">Return to init</Link>
+                <Link className="back" to="/">
+                    <AiOutlineArrowLeft />
+                </Link>
                 <div className="movie__info">
                     <div className="movie__info-item-image">
                         <img src={movie.Poster} alt={movie.Poster}/>
                     </div>
                     <div className="movie__info-item">
-                        <h1>Title: {movie.Title}</h1>
-                        <p>Year: {movie.Year}</p>
-                        <p>Rated: {movie.Rated}</p>
-                        <p>Released: {movie.Released}</p>
-                        <p>Runtime: {movie.Runtime}</p>
-                        <p>Genre: {movie.Genre}</p>
-                        <p>Director: {movie.Director}</p>
-                        <p>Writer: {movie.Writer}</p>
-                        <p>Actors: {movie.Actors}</p>
-                        <p>Plot: {movie.Plot}</p>
-                        <p>Language: {movie.Language}</p>
-                        <p>Country: {movie.Country}</p>
-                        <p>Awards: {movie.Awards}</p>
-                        <p>Production: {movie.Production}</p>
+                        <p><span>Title:</span> {movie.Title}</p>
+                        <p><span>Year:</span> {movie.Year}</p>
+                        <p><span>Rated:</span> {movie.Rated}</p>
+                        <p><span>Released:</span> {movie.Released}</p>
+                        <p><span>Runtime:</span> {movie.Runtime}</p>
+                        <p><span>Genre:</span> {movie.Genre}</p>
+                        <p><span>Director:</span> {movie.Director}</p>
+                        <p><span>Writer:</span> {movie.Writer}</p>
+                        <p><span>Actors:</span> {movie.Actors}</p>
+                        <p><span>Plot:</span> {movie.Plot}</p>
+                        <p><span>Language:</span> {movie.Language}</p>
+                        <p><span>Country:</span> {movie.Country}</p>
+                        <p><span>Awards:</span> {movie.Awards}</p>
+                        <p><span>Production:</span> {movie.Production}</p>
                         <div className="ratings">
                             <Ratings ratings={movie.Ratings}/>
                         </div>

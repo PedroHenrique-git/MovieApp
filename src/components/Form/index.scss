@@ -1,0 +1,46 @@
+$default-background: rgb(44, 39, 39); 
+$text-color: white;
+$background-button: black;
+
+form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    input{
+        height: 50px;
+        border: none;
+        outline: none;
+    }
+
+    input[type="text"]{
+        width: 700px;
+        font-size: 2em;
+        border-bottom: 7px solid black;
+        background: transparent;
+        color:  $text-color;
+
+        @media (max-width: 640px){
+            width: 300px;
+        }
+    }
+
+    button{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        display: flex;
+        cursor: pointer;
+        background: $background-button;
+        justify-content: center;
+        align-items: center;
+
+        svg{
+            width: 25px;
+            height: 25px;
+            color: wheat;
+        }
+    }
+}

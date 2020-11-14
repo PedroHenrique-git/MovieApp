@@ -1,0 +1,61 @@
+$default-background: rgb(44, 39, 39); 
+$text-color: white;
+$background-button: rgb(25, 68, 124);
+
+.container-movie{
+    background-color: rgba(37, 44, 44, 0.7);
+    margin: auto;
+
+    .back{
+        color: black;
+        background: rgb(243, 61, 61);
+        border-radius: 10px;
+        padding: 14px;
+        text-decoration: none;
+        font-size: 1.2em;
+        width: 25px;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover{
+            background: rgb(150, 79, 79);
+            transition: all .4s;
+        }
+    }
+
+    .movie__info{
+        display: flex;
+
+        @media (max-width: 640px){
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .movie__info-item-image{
+            padding: 40px;
+        }
+
+        .movie__info-item{
+            padding: 40px;
+
+            p,h1{
+                color: white;
+                font-size: 1.2em;
+                margin-bottom: 5px;
+            }
+
+            span{
+                margin-right: 10px;
+                font-weight: 800;
+                color: rgb(115, 196, 212);
+            }
+
+            ul{
+                list-style: none;
+            }
+        }
+    }
+}

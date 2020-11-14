@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import Form from '../Form';
 import url from '../../config/index';
 import { Link } from 'react-router-dom';
+import { AiOutlineArrowLeft} from 'react-icons/ai';
 import './index.scss';
+
+console.log(url);
 
 export default function TodoApp() {
 
@@ -31,26 +34,37 @@ export default function TodoApp() {
 
     if(error){
 
-        return <div className="error">Error: {error}</div>
+        return <div className="error">
+                    <Link className="back" onClick={() => setMovies([])} to="/">
+                        <AiOutlineArrowLeft />
+                    </Link><br/>
+                    <p>Error</p>
+                </div>
 
     }else if(!isLoaded){
 
-        return <div className="isloaded">Loading...</div>
+        return <div className="isloaded">
+                    <p>Loading...</p>
+                </div>
 
     }else if(movies.Error){
 
         return(
-            <div>
-                <Link onClick={() => setMovies([])} to="/">Return to the form</Link><br/>
-                {movies.Error}
+            <div className="movies-errors">
+                <Link className="back" onClick={() => setMovies([])} to="/">
+                    <AiOutlineArrowLeft />
+                </Link><br/>
+                <p>{movies.Error}</p>
             </div>
         );
 
     }else if(movies.Search !== undefined){
 
         return(
-            <div>
-                <Link onClick={() => setMovies([])} to="/">Return to the form</Link>
+            <div className="container-movies">
+                <Link className="back" onClick={() => setMovies([])} to="/">
+                    <AiOutlineArrowLeft />
+                </Link>
                 <ul>
                     { movies.Search.map(movie =>
                         <li key={movie.imdbID}>
