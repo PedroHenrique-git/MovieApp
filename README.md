@@ -12,8 +12,8 @@ install dependencies: <b> npm i or npm install </b>
 
 ## Built With
 
-* [ReactJs](https://pt-br.reactjs.org/) - The web framework used
-* [Sass](https://sass-lang.com/documentation/syntax) - Dependency Management
+* [ReactJs](https://pt-br.reactjs.org/) 
+* [Sass](https://sass-lang.com/documentation/syntax)
 
 ## Images
 
